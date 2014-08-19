@@ -25,7 +25,7 @@ Here is an older screencast about how to create a code browser and modify its ap
 ```Smalltalk
 Metacello new
   baseline: 'Vivide';
-  repository: 'github://marceltaeumel/vivide/repository';
+  repository: 'github://marceltaeumel/vivide:2.0/repository';
   load.
 ```
 
