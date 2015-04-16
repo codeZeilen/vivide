@@ -6,17 +6,17 @@ baseline: spec
 		spec project: 'Signals' with: [
 			spec
 				className: 'BaselineOfSignals';
-				repository: 'github://marceltaeumel/signals:master/repository'].
+				repository: 'github://marceltaeumel/signals:2.0/repository'].
 
 		spec project: 'Animations' with: [
 			spec
 				className: 'BaselineOfAnimations';
-				repository: 'github://marceltaeumel/animations:master/repository'].
+				repository: 'github://marceltaeumel/animations:2.0/repository'].
 
 		spec project: 'Widgets' with: [
 			spec
 				className: 'BaselineOfWidgets';
-				repository: 'github://marceltaeumel/widgets:master/repository';
+				repository: 'github://marceltaeumel/widgets:2.0/repository';
 				loads: #(full)].
 		
 		spec project: 'Refactoring-Core' with: [
