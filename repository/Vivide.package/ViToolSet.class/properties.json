@@ -10,5 +10,5 @@
 	"name" : "ViToolSet",
 	"pools" : [
 		 ],
-	"super" : "ECToolSet",
+	"super" : "StandardToolSet",
 	"type" : "normal" }
