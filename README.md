@@ -2,6 +2,16 @@
 
 A programming environment and framework that supports *interactive*, *data-driven*, *scriptable* construction of graphical tools with low effort. It is implemented in Squeak/Smalltalk.
 
+##Important Announcement
+
+This 4.0 branch is used to develop a version of Vivide that has no external dependencies other than provided by [Squeak Trunk](http://squeak.org/downloads/). This means that the following dependent projects will be removed from the core system to some extras package:
+
+* [Signals](https://github.com/hpi-swa/signals)
+* [Animations](https://github.com/hpi-swa/animations)
+* [Widgets](https://github.com/hpi-swa/widgets)
+
+Other dependencies includes JSON, Refactoring-Core, and OCompletion. All these projects do enrich the Vivide experience but are not necessary for the core concepts.
+
 ##How to Install [![Build Status](https://secure.travis-ci.org/hpi-swa/vivide.png?branch=master)](http://travis-ci.org/hpi-swa/vivide)
 
 1. Get [Squeak 4.6 or later](http://www.squeak.org) with a recent [CogVM](http://www.mirandabanda.org/files/Cog/VM/) for your operating system.
