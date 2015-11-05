@@ -21,20 +21,20 @@ hardcodedScriptIds
 	SystemNavigation default allSelectorsAndMethodsDo: [:b :s :method |
 		(b isTestClass not and: [method literals includesAnyOf: scriptSelectors]) ifTrue: [
 			| ast |
-			ast := RBParser parseMethod: method getSource asString.
-			ast nodesDo: [:node |
+			ast := ViToolSet parseMethod: method getSource asString.
+			ViToolSet messagesIn: ast do: [:node |
 				(((node isMessage "#default asScript"
-					and: [scriptSelectors includes: node selector]) "#asScript"
+					and: [scriptSelectors includes: node selector key]) "#asScript"
 					and: [node receiver isLiteralNode]) "#default"
-					and: [node receiver value isSymbol]) "Ignore script strings."
-						ifTrue: [scriptIds add: node receiver value].
+					and: [node receiver literalValue isSymbol]) "Ignore script strings."
+						ifTrue: [scriptIds add: node receiver literalValue].
 						
 				((((node isMessage "ViSinglePaneEditor new: #artifacts for: someObjects"
-					and: [scriptSelectors includes: node selector]) "#new:for:"
-					and: [node receiver isVariable]) "ViSinglePaneEditor"
-					and: [(Smalltalk at: node receiver token value asSymbol ifAbsent: []) isBehavior])
-					and: [node arguments first value isSymbol]) "no temps"
-						ifTrue: [scriptIds add: node arguments first value].
+					and: [scriptSelectors includes: node selector key]) "#new:for:"
+					and: [node receiver isVariableNode]) "ViSinglePaneEditor"
+					and: [(Smalltalk classNamed: node receiver name) isBehavior])
+					and: [node arguments first isLiteralNode]) "no temps"
+						ifTrue: [scriptIds add: node arguments first key].
 	]]].
 			
 	^ scriptIds sorted

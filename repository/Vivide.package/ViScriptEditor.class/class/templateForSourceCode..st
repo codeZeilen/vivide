@@ -2,29 +2,26 @@ templates - support
 templateForSourceCode: code
 	"Guess the underlying script template given the code."
 
-	| node template properties tmp |
+	| node template properties |
 	properties := Dictionary new.
 	template := self templateStandard.
-	node := RBParser
-		parseExpression: code
-		onError: [:msg :idx | ^ template -> properties].
+	node := ViToolSet
+		parse: code
+		onError: [^ template -> properties].
 
-	(node sentMessages anySatisfy: [:msg |
+	((ViToolSet sentMessages: node) anySatisfy: [:msg |
 		#(collect: select: gather: reject: reduce: inject: asGroups sort: sorted: sorted sortBy:) anySatisfy: [:verb |  
 			msg beginsWith: verb]]) ifTrue: [
 			template := self templateAllAtOnce].
 	
-	node isBlock ifTrue: [
+	node isBlockNode ifTrue: [
 		node arguments size = 0 ifTrue: [template := self templateGlobal].
 		node arguments size > 1 ifTrue: [
 			template := self templateTuples.
 			properties at: #inputKind put: (Array new: node arguments size)].
 
-		(node allChildren anySatisfy: [:child |
-			tmp := child.
-			((child isMessage
-				and: [child selector = #->])
-				and: [child receiver isLiteral])
+		(ViToolSet anyMessageIn: node satisfying: [:msg |
+			(msg selector key = #-> and: [msg receiver isLiteralNode])
 				"and: [#(text icon color morph icon) includes: child receiver value]"])
 					ifTrue: [ "So we have an association with suspicious keys..."
 						"properties at: #modelClass put: ViQueryNode." "Skip default?"
@@ -37,7 +34,7 @@ templateForSourceCode: code
 								ifFalse: [self templateTuplesProperties]]].  
 	].
 
-	(node isMessage and: [node selector = #->]) ifTrue: [
+	(node isMessage and: [node selector key = #->]) ifTrue: [
 		template := nil -> ''.
 		"Full block in script properties detected!"
 		(Compiler evaluate: code) value do: [:assoc |

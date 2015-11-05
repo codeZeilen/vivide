@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"anyMessageIn:satisfying:" : "mt 11/5/2015 15:37",
 		"browse:selector:" : "mt 11/13/2014 10:24:48.71",
 		"browseHierarchy:selector:" : "mt 11/13/2014 10:24:57.068",
 		"browseMessageSet:name:autoSelect:" : "mt 2/1/2015 11:06",
@@ -20,11 +21,17 @@
 		"linesOfCodeForMethod:" : "mt 2/13/2014 16:16:17.953",
 		"linesOfCodeForMethod:do:" : "mt 2/21/2014 14:01:02.679",
 		"linesOfCodeForSourceCode:do:" : "mt 2/21/2014 14:00:08.922",
+		"messagesIn:do:" : "mt 11/5/2015 15:37",
 		"methodCategories" : "mt 2/21/2014 13:45:12.987",
 		"methodNullCategory" : "mt 2/21/2014 13:45:03.018",
 		"numberOfMethods:accessing:" : "mt 10/28/2015 14:36:09.932",
+		"parse:" : "mt 11/5/2015 13:54",
+		"parse:onError:" : "mt 11/5/2015 15:57",
+		"parseMethod:" : "mt 11/5/2015 15:36",
+		"parseMethod:onError:" : "mt 11/5/2015 15:36",
 		"printRelativeTimeStamp:" : "mt 7/24/2014 11:03:58.903",
 		"selectFromMethods:thatAccess:" : "mt 10/28/2015 14:29:00.066",
-		"selectInGraphFromMethods:thatAccess:" : "mt 10/29/2015 16:49:55.024" },
+		"selectInGraphFromMethods:thatAccess:" : "mt 10/29/2015 16:49:55.024",
+		"sentMessages:" : "mt 11/5/2015 13:52" },
 	"instance" : {
 		 } }

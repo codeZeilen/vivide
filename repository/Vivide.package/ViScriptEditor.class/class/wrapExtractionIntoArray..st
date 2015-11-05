@@ -4,14 +4,17 @@ wrapExtractionIntoArray: code
 
 	| inner node |
 	inner := code.
-	node := RBParser parseExpression: inner.
-	self assert: node isBlock.
-	node body statements first isArray ifFalse: [
+	node := ViToolSet parse: inner.
+	self assert: node isBlockNode.
+	node statements first class == BraceNode ifFalse: [
+		| a b |
+		a := code indexOf: $|.
+		b := code lastIndexOf: $].
 		"We need to wrap it into an array."
 		inner := '{1}\{ {2} \}{3}' format: {
-			node source copyFrom: 1 to: node body start - 1.
-			node source copyFrom: node body start to: node body stop.
-			node source copyFrom: node body stop + 1 to: node source size
+			code copyFrom: 1 to: a.
+			code copyFrom: a+1 to: b-1.
+			']'
 		}.
 	].
 
