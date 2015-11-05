@@ -1,4 +1,4 @@
-as yet unclassified
+help
 outOfWorld: aWorld
 
 	helpBox ifNotNil: [helpBox delete].

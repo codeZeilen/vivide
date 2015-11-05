@@ -1,4 +1,4 @@
-as yet unclassified
+flags
 setFlags: someSymbols
 	"Set some flags (only!). Specs need to be present."
 

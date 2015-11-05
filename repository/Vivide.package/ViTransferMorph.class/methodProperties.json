@@ -2,15 +2,23 @@
 	"class" : {
 		 },
 	"instance" : {
+		"aboutToBeGrabbedBy:" : "mt 11/5/2015 15:16",
+		"defaultColor" : "mt 11/5/2015 14:42",
 		"flagSpecs" : "mt 10/26/2015 14:14:51.516",
 		"flagSpecs:" : "mt 12/16/2014 15:11:47.574",
+		"hasFlag:" : "mt 11/5/2015 15:31",
 		"iconFor:" : "mt 11/8/2013 11:16:00.466",
 		"initDraggedMorph" : "mt 5/2/2014 11:48:06.99",
+		"initialize" : "mt 11/5/2015 14:50",
+		"keyStroke:" : "mt 11/5/2015 14:58",
 		"labelFor:" : "mt 11/8/2013 11:16:02.965",
+		"labelMorphFor:" : "mt 11/5/2015 14:49",
 		"noteNewOwner:" : "mt 12/16/2014 16:40:58.409",
+		"objectMorphFor:" : "mt 11/5/2015 15:24",
 		"outOfWorld:" : "mt 12/16/2014 16:40:51.89",
+		"passenger:" : "mt 11/5/2015 15:18",
 		"setFlags:" : "mt 12/16/2014 15:36:18.069",
-		"showHelp" : "mt 5/29/2015 11:04",
+		"showHelp" : "mt 11/5/2015 15:14",
 		"step" : "mt 12/16/2014 16:54:24.912",
-		"updateKeyStroke:" : "mt 12/16/2014 15:16:45.266",
-		"updateModifier:" : "mt 12/16/2014 14:55:32.164" } }
+		"updateCopyIcon" : "mt 11/5/2015 14:57",
+		"updateFlag:description:value:" : "mt 11/5/2015 15:31" } }

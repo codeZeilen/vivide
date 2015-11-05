@@ -12,5 +12,5 @@
 	"name" : "ViTransferMorph",
 	"pools" : [
 		 ],
-	"super" : "UiTransferMorph",
+	"super" : "TransferMorph",
 	"type" : "normal" }

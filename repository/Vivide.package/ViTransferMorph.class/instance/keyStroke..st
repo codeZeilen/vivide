@@ -1,6 +1,8 @@
-as yet unclassified
-updateKeyStroke: evt
+event handling
+keyStroke: evt
 
+	super keyStroke: evt.
+	
 	self flagSpecs do: [:spec |
 		spec first = evt keyCharacter ifTrue: [
 			^ self

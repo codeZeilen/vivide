@@ -1,4 +1,4 @@
-as yet unclassified
+flags
 flagSpecs: someSpecs
 
 	flagSpecs := someSpecs.

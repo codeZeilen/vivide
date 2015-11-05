@@ -1,19 +1,22 @@
-as yet unclassified
+help
 showHelp
 
 	| text |
 	self owner ifNil: [^ self].
 
-	text := ('<font size="18" family="Bitmap Segoe UI Light" color="#008800">Drag Modifier Keys</font>',
-		('<font size="22" family="Bitmap Segoe UI Light" color="#AAAAAA">{1}</font>' format: {
+	text := ('<font color="#008800">Drag Modifier Keys</font>',
+		('<font color="#000000">{1}</font>' format: {
 		self flagSpecs
 			inject: ''
-			into: [:label :spec | label, String cr, String tab, spec first asString, ' ... ', spec second]	
-		})) asHtmlText asMorph.
-	text backgroundColor: Color black.
+			into: [:label :spec | label, '<br>&nbsp;&nbsp;&nbsp;', spec first asString, ' ... ', spec second]	
+		})) asTextFromHtml asMorph.
 	
-	helpBox := (ViDropShadowManager default formForBounds: (text fullBounds outsetBy: 15)) asMorph.
-	text topLeft: helpBox topLeft + (25@25).
+	helpBox := Morph new
+		color: BalloonMorph balloonColor;
+		borderColor: Color black;
+		bounds: (text fullBounds outsetBy: 15);
+		addDropShadow.
+	text topLeft: helpBox topLeft + (15@15).
 	helpBox addMorphFront: text.
 
 	helpBoxPositions := OrderedCollection new.

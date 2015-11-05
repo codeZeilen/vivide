@@ -1,4 +1,4 @@
-as yet unclassified
+flags
 flagSpecs
 	"#( ($a 'Accept changes' #accept) ($e 'Evaluate object' #evaluate) )
 	Stores keystroke modifiers for drag operations: key char, descriptive string, unique flag symbol"
