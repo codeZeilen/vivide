@@ -21,7 +21,7 @@ Other dependencies includes JSON, Refactoring-Core, and OCompletion. All these p
 ```Smalltalk
 Metacello new
   baseline: 'Vivide';
-  repository: 'github://hpi-swa/vivide/repository';
+  repository: 'github://hpi-swa/vivide:4.0/repository';
   load.
 ```
 
