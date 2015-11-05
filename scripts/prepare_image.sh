@@ -28,8 +28,8 @@ fi
 # Set paths and files
 # ==============================================================================
 DEPLOY_PATH="$SMALLTALK_CI_HOME/deploy"
-VIVIDE_IMAGE="Vivide-$SMALLTALK.image"
-VIVIDE_CHANGES="Vivide-$SMALLTALK.changes"
+VIVIDE_IMAGE="Vivide-4.0-$SMALLTALK.image"
+VIVIDE_CHANGES="Vivide-4.0-$SMALLTALK.changes"
 DEPLOY_TARGET="https://www.hpi.uni-potsdam.de/hirschfeld/artefacts/vivide/"
 COG_VM_PARAM=""
 case "$(uname -s)" in
